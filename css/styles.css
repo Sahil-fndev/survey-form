@@ -111,6 +111,21 @@ button:hover {
     opacity: 0.8;
 }
 
+footer {
+    text-align: center;
+    font-size: var(--font-size);
+    font-weight: 600;
+}
+
+.copyright_container {
+    padding-bottom: 0.2vh;
+    border-bottom: 0.09rem solid black;
+}
+
+.author {
+    padding-top: 0.5vh;
+}
+
 /*               for mobile phone      */
 
 @media screen and (max-width: 480px) {
