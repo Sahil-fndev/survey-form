@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body onload="getCurrentYear()">
+
+    <!--                                     header                                 -->
     <header>
         <h1>Survey-Form</h1>
         <p>It would be wonderful if you could fill out this form</p>
     </header>
+
     <main>
+
+        <!--                                 form                                       -->
         <section id="forms">
             <form name="forms" id="myForm">
                 <fieldset>
@@ -65,13 +70,18 @@
         </section>
     </main>
 
+
+    <!--                                footer                                             -->
+
     <footer>
         <div class="copyright_container">
-            <p>&copy; Copyright 2022</p>
+            <p>&copy; Copyright <span id="year"></span></p>
         </div>
         <div class="author">
             <p>Designed and developed by Sahil</p>
         </div>
     </footer>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
