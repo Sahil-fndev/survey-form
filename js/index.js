@@ -28,14 +28,10 @@ mdbtn.onclick = function () {
     model.style.display = "block"
 
 
-    // hide header and form 
+    // hide header, footer and form 
     form.style.display = "none"
     header.style.display = "none"
-   
-
-    //  set footer position fixed at bottom of the page
-    footer.style.position = "fixed";
-    footer.style.bottom = 0;
+    footer.style.display = "none";
 }
 
 //  event to hide model and reset form
@@ -43,12 +39,11 @@ closebtn.onclick = function () {
     // hide  result model
     model.style.display = "none"
 
-    // show header and form 
-    form.style.display = "block"
-    header.style.display = "block"
-    form.reset();
+    // show header, footer and form 
+    form.style.display = "block";
+    header.style.display = "block";
+    footer.style.display = "block";
 
-    //  set footer position fixed at bottom of the page
-    footer.style.position = "inherit";
-    footer.style.bottom = "inherit";
+    // reset form 
+    form.reset();
 }
