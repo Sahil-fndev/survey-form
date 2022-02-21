@@ -164,6 +164,9 @@ footer {
 /*               for mobile phone      */
 
 @media screen and (max-width: 480px) {
+    input[type="radio"], input[type="checkbox"] {
+        transform: scale(1);
+    }
 
     fieldset {
         padding: 1vh 1vw;
@@ -195,6 +198,10 @@ footer {
 
     .qna, .yes-no {
         padding: calc(1.5% + .2vh);
+    }
+
+    footer {
+        bottom:  0;
     }
 }
 
