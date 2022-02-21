@@ -12,7 +12,7 @@
 <body onload="getCurrentYear()">
 
     <!--                                     header                                 -->
-    <header>
+    <header id="header">
         <h1>Survey-Form</h1>
         <p>It would be wonderful if you could fill out this form</p>
     </header>
@@ -21,59 +21,75 @@
 
         <!--                                 form                                       -->
         <section id="forms">
-            <form name="forms" id="myForm">
+            <form id="surveyForm">
                 <fieldset>
                     <legend>How to reach you</legend>
-                    <label for="name">Full Name:</label> <input type="text" name="name" id="name" placeholder="Sahil"
-                        required autocomplete="OFF" autofocus/>
-                    <label for="email">Email:</label> <input type="email" name="email" id="email"
-                        placeholder="sahil@xyz.com" required autocomplete="OFF"  autofocus/>
+                    <div class="userinfo">
+                        <p><label for="fullname">Full Name: <input type="text" name="fullName" id="fullname" required
+                                    autofocus autocomplete="OFF" placeholder="Sahil" /></label></p>
+                    </div>
+                    <div class="userinfo">
+                        <p><label for="email">Email: <input type="email" name="emailaddress" id="email" required
+                                    autofocus autocomplete="OFF" placeholder="sahil@abc.com" /></label></p>
+                    </div>
                 </fieldset>
+
                 <fieldset>
                     <legend>Your Responses</legend>
-                    <p>Were you satisfied with the website?</p>
-                    <ul>
-                        <li>
-                            <label for="radiobool">Yes</label>
-                            <input type="radio" id="radiobool" name="radiobool" value="yes">
-                        </li>
-                        <li>
-                            <label for="radiobool">No</label>
-                            <input type="radio" id="radiobool" name="radiobool" value="no">
-                        </li>
-                    </ul>
-                    <p for="select_option">What did you like about it?</p>
-                    <ul>
-                        <li>
-                            <label for="interaction">Interaction</label>
-                            <input type="checkbox" name="interaction" id="interaction" value="interaction">
-                        </li>
-                        <li>
-                            <label for="aesthetics">Aesthetics</label>
-                            <input type="checkbox" name="aesthetics" id="aesthetics" value="aesthetics">
-                        </li>
-                        <li>
-                            <label for="content">Content</label>
-                            <input type="checkbox" name="content" id="content" value="content">
-                        </li>
-                    </ul>
 
-                    <label for="feedback_text">Tell me your view about this website:</label>
-                    <textarea name="feedback_text" id="feedback_text" cols="1" rows="1"
-                        placeholder="Tell me something.." autocomplete="OFF" /></textarea>
+                    <p><label for="yes-no">Were you satisfied with the website?
+                            <div class="yes-no">
+                                <input type="radio" name="yes-no" id="yes" value="yes" required> Yes
+                            </div>
+                            <div class="yes-no">
+                                <input type="radio" name="yes-no" id="no" value="no" required> No
+                            </div>
+                        </label></p>
+                    <p><label>What did you like about it?</label></p>
+                    <div class="qna">
+                        <p><label for="Interaction">
+                                <input type="checkbox" name="Interaction" id="Interaction" value="Interaction">
+                                Interaction</label></p>
+                    </div>
+                    <div class="qna">
+                        <p><label for="Aesthetics">
+                                <input type="checkbox" name="Aesthetics" id="Aesthetics" value="Aesthetics">
+                                Aesthetics
+                            </label></p>
+                    </div>
+                    <div class="qna">
+                        <p><label for="Content">
+                                <input type="checkbox" name="Content" id="Content" value="Content"> Content
+                            </label></p>
+                    </div>
+
+                    <div class="textarea">
+                        <p><label for="textarea">
+                                You want to share something with me: <textarea name="textarea" id="textarea" cols="2" rows="1"
+                                    placeholder="Write something..." required></textarea>
+                            </label></p>
+                    </div>
                 </fieldset>
 
-                <button type="submit" onclick="userDetail()" id="btn">
-                    <p>Submit</p>
-                </button>
+                <p><button type="submit" id="subbtn">Submit</button></p>
             </form>
         </section>
+
+        <div id="res_model" class="model">
+            <div class="container">
+                <h2>Thanks for responding</h2>
+              <button type="reset" id="closebtn"></p>Go back</p></button>
+               <div class="note">
+                <p><strong>Note:</strong> The data entered into this form will not be stored anywhere.</p>
+            </div>
+            </div>
+        </div>
     </main>
 
 
     <!--                                footer                                             -->
 
-    <footer>
+    <footer id="footer">
         <div class="copyright_container">
             <p>&copy; Copyright <span id="year"></span></p>
         </div>
@@ -84,4 +100,5 @@
 
     <script src="./js/index.js"></script>
 </body>
+
 </html>
