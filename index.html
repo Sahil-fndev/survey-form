@@ -21,7 +21,7 @@
 
         <!--                                 form                                       -->
         <section id="forms">
-            <form id="surveyForm">
+            <form id="surveyForm"  method="GET" role="form" onsubmit="return false">
                 <fieldset>
                     <legend>How to reach you</legend>
                     <div class="userinfo">
@@ -39,10 +39,10 @@
 
                     <p><label for="yes-no">Were you satisfied with the website?
                             <div class="yes-no">
-                                <input type="radio" name="yes-no" id="yes" value="yes" required> Yes
+                                <input type="radio" name="yes-no" id="yes" value="yes"> Yes
                             </div>
                             <div class="yes-no">
-                                <input type="radio" name="yes-no" id="no" value="no" required> No
+                                <input type="radio" name="yes-no" id="no" value="no"> No
                             </div>
                         </label></p>
                     <p><label>What did you like about it?</label></p>
@@ -66,18 +66,19 @@
                     <div class="textarea">
                         <p><label for="textarea">
                                 You want to share something with me: <textarea name="textarea" id="textarea" cols="2" rows="1"
-                                    placeholder="Write something..." required></textarea>
+                                    placeholder="Write something..."></textarea>
                             </label></p>
                     </div>
                 </fieldset>
 
-                <p><button type="submit" id="subbtn">Submit</button></p>
+                <p><button type="submit" id="subbtn" onclick="show()">Submit</button></p>
             </form>
         </section>
 
         <div id="res_model" class="model">
             <div class="container">
                 <h2>Thanks for responding</h2>
+                <p class="text"><span id="name"></span>, you have filled out the form successfully.</p>
               <button type="reset" id="closebtn"></p>Go back</p></button>
                <div class="note">
                 <p><strong>Note:</strong> The data entered into this form will not be stored anywhere.</p>
