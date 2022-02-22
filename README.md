@@ -7,5 +7,6 @@ This is how the
 
 ## The project covers the following concepts:
 
-1. ✔️ JavaScript DOM
-2. ✔️  HTML Forms
+1. ✔️ HTML DOM
+2. ✔️ HTML Forms
+3. ✔️ DOM manipulation
