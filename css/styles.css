@@ -134,20 +134,31 @@ footer {
     margin: 18% auto;
     padding: 5%;
     width: 70%;
-    row-gap: calc(10% + 2rem);
+    row-gap: calc(8% + 1.2em);
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 'heading heading'
+    'userinfo userinfo'
     'button button'
     'note note';
+}
+
+.model #name {
+    font-weight: 800;
 }
 
 .container h2 {
     grid-area: heading;
     margin: auto;
+}
+
+.container .text {
+    text-align: center;
+    grid-area: userinfo;
+    width: 100%;
 }
 
 .container  #closebtn {
@@ -158,8 +169,9 @@ footer {
 
 .container .note {
     grid-area: note;
-    font-size: clamp(0.76rem, 0.76rem + 0.02vw, 0.77rem);
+    font-size: var(--footer-font-size);
 }
+
 
 /*               for mobile phone      */
 
@@ -178,6 +190,10 @@ footer {
 
     input[type="text"], input[type="email"], textarea {
         padding: 0.5%;
+    }
+
+    .model .container {
+        row-gap: calc(8% + 1.5em);
     }
 }
 
