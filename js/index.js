@@ -22,17 +22,30 @@ let model = document.getElementById('res_model');
 
 
 
+
+
 // event  to show model 
 mdbtn.onclick = function () {
-    // show  result model
-    model.style.display = "block"
+    let fullName = document.getElementById('fullname').value;
+    let email = document.getElementById('email').value;
 
+    if (fullName == '' && email == '') {
+        alert("Please provide your full name and email address.")
+        console.log(fullName)
+    }
+    else {
 
-    // hide header, footer and form 
-    form.style.display = "none"
-    header.style.display = "none"
-    footer.style.display = "none";
+        // show  result model
+        model.style.display = "block"
+
+        document.getElementById('name').innerText = fullName;
+        // hide header, footer and form 
+        form.style.display = "none"
+        header.style.display = "none"
+        footer.style.display = "none";
+    }
 }
+
 
 //  event to hide model and reset form
 closebtn.onclick = function () {
